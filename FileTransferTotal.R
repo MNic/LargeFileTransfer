@@ -1,7 +1,7 @@
 #'Original need: Move a subset of 388 large (half 1.2GB+ each, half 50MB each) out of a
 #'multi-folder filetree containing ~2500 files of similar size.  
 #'
-#'Files are paired end fastq.gz and fastx identified only by a sample identifier common
+#'Files are paired end .fastq.gz and .fastx identified only by a sample identifier common
 #'across all sample-associated files and their suffixes.  Other file types included in
 #'the folders of interest are .clipped.fastq.gz, .fastx.png, .txt, etc.
 #'
@@ -29,7 +29,7 @@ flonly <- flfastq[!(flfastq %in% fastqtxt)]          #Select folder names only
 #'For loop possibly not preferred due to inefficiency; but rate limiting
 #'step is file transfer rate in this application
 
-k <- 1    #k loop: loops through foulders in 'src' file tree
+k <- 1    #k loop: loops through folders in 'src' file tree
 i <- 1    #i loop: loops through criteria matching filenames within 'src/folder' defined by k
 j <- 1    #j loop: copies files defined by i
 
